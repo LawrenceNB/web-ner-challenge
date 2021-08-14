@@ -35,9 +35,8 @@ def get_ner():
             result[word.label_].append(word.text)
     for key in result.keys():
         result[key] = ", ".join(result[key])
-        
-    if len(result[key]) > 2 and result[key][:2] == "b'":
-        result[key] = result[key][2:]
+        if len(result[key]) > 2 and result[key][:2] == "b'":
+            result[key] = result[key][2:]
     
     return generate_response(result)
     
