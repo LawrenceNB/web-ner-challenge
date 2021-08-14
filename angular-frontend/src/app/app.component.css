@@ -1,0 +1,5 @@
+.container {
+    background-image: linear-gradient(rgb(238, 197, 197), rgb(165, 214, 165));
+    height: 100vh;
+    max-width: 100vw;
+}

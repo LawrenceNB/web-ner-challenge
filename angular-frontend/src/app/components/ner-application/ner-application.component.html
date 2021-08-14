@@ -1,0 +1,26 @@
+<div class="container">
+
+    <h1 class="title">Named Entity Parser</h1>
+  
+    <form class="input-form">
+          <mat-form-field class="input-form-mat" appearance="fill">
+            <mat-label>Type in some sentences</mat-label>
+            <textarea style="height:30vh;" #userInput [(ngModel)]="inputString" name="userInput" type="text" matInput placeholder="Ex. The pilot, John Doe, flew over the United States in his airplane." ></textarea>
+          </mat-form-field>
+          <div class="buttons">
+            <button (click) = 'getNer()' mat-flat-button color="primary">Process</button>
+            <button class="clear-btn" (click) = 'clear()' mat-flat-button color="primary">Clear</button>
+          </div>
+    </form>
+  
+    <p  class="empty-message" *ngIf="displayEmpty == true">No results found</p>
+  
+    <div class="result-block">  
+      <p  class="result-title" *ngIf="person.length + gpe.length + loc.length + org.length > 0">Result:</p>
+      <p *ngIf="person.length > 0"> <span>Person: </span> {{ person }}</p>
+      <p *ngIf="gpe.length > 0"> <span>GPE: </span> {{ gpe }}</p>
+      <p *ngIf="loc.length > 0"> <span>LOC: </span> {{ loc }}</p>
+      <p *ngIf="org.length > 0"> <span>ORG: </span> {{ org }}</p>
+    </div>
+  
+  </div>

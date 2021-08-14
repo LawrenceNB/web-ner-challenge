@@ -2,9 +2,11 @@ default:
 	@echo "An explicit target is required"
 
 install:
-	cd $(FRONTEND) && npm install
-	cd $(BACKEND) && pip install -r requirements.txt
+	cd angular-frontend && npm install
+	cd flask-backend && pip install -r requirements.txt
 
-start:
-	cd $(FRONTEND) && npm run serve &
-	cd $(BACKEND) && flask run
+frontend start:
+	cd angular-frontend && npm start
+
+backend start:
+	cd flask-backend && flask run

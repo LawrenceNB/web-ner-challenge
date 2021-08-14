@@ -1,0 +1,63 @@
+.container {
+    padding-top: 10vh;
+  }
+  
+.title{
+    text-align: center;
+  }
+
+.input-form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 10vw;
+    max-width: 70vw;
+    width: 100%;
+}
+    
+.input-form-mat {
+    width: 100%;
+}
+
+.buttons {
+    text-align: center;
+}
+
+button {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.clear-btn {
+    margin-left: 2vw;
+}
+
+.empty-message {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.result-block {
+    margin-top: 3vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    min-width: 10vw;
+    max-width: 70vw;
+    width: 100%;
+}
+
+.result-block p {
+    margin-top: -1vh;
+}
+
+.result-block span {
+    color: red;
+}
+
+
+.result-title {
+    font-size: 20px;
+}
+
